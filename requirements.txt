@@ -1,0 +1,9 @@
+pettingzoo
+torch
+torchvision
+matplotlib
+stable-baselines3
+numpy
+gymnasium
+notebook
+supersuit
