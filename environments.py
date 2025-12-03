@@ -40,7 +40,7 @@ class KyleOnePeriodAEC(AECEnv):
         "name": "KyleOnePeriodAEC",
     }
 
-    def __init__(self, sigma_v=2.0, sigma_u=1.0, p0=0.5, gamma=0.9, action_scaling=5, T=1):
+    def __init__(self, sigma_v=2.0, sigma_u=1.0, p0=0.5, gamma=0.9, action_scaling=5, T=25):
         super().__init__()
         self.sigma_v_initial = sigma_v
         self.sigma_u_initial = sigma_u
@@ -65,8 +65,8 @@ class KyleOnePeriodAEC(AECEnv):
         self.agent_selector = agent_selector(self.agents)
 
         self.action_spaces = {
-            "insider": spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32),
-            "market_maker": spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
+            "insider": spaces.Box(low=-5, high=5, shape=(1,), dtype=np.float32),
+            "market_maker": spaces.Box(low=-5, high=5, shape=(1,), dtype=np.float32)
         }
 
         self.observation_spaces = {
